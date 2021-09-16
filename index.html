@@ -25,6 +25,7 @@
   <section id="btn">
     <button href="" id="save_btn" download="info.txt">저장하기</button>
     <button id="delete_btn">모두 지우기</button>
+    <button id="dark_btn">야간모드</button>
   </section>
 
   <script>
@@ -61,6 +62,12 @@
       textarea.value = "";
       count_str.innerHTML = 0;
       count_char.innerHTML = 0;
+    })
+
+    // 야간모드
+    document.getElementById("dark_btn").addEventListener("click", () => {
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
     })
 
   </script>
