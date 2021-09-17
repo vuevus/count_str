@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  &.darkMode {
+    background-color: black;
+    color: white;
+  }
+}
+input {
+  outline: none;
+}
+textarea {
+  outline: none;
+  resize: none;
+}
+
+#text_content {
+  #title {
+    margin-bottom: 24px;
+    #file_name {
+      display: block;
+    }
+    #input_name {
+      width: 60%;
+      height: 36px;
+    }
+  }
+  #content {
+    #file_content {
+      display: block;
+    }
+    #input_content {
+      width: 60%;
+      height: 600px;
+    }
+  }
+}
+
+#count {
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+  div:nth-child(1) {
+    padding-right: 24px;
+  }
+}
+
+#btn {
+  #save_btn {
+  }
+  #delete_btn {
+  }
+  #dark_btn {
+  }
+}

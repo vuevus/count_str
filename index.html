@@ -1,75 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>글자수세기</title>
+  <link rel="stylesheet" href="./main.scss">
+  <script src="./js/main.js" defer></script>
+  <script src="./js/darkmode.js" defer></script>
 </head>
+
 <body>
   <h2>글자수세기</h2>
   <section id="text_content">
     <div id="title">
-      <label for="fileName" id="file_name">파일 제목 : </label>
+      <label for="fileName" id="file_name">파일 제목</label>
       <input type="text" id="input_name" name="fileName" placeholder="파일 제목을 입력해주세요.">
     </div>
     <div id="content">
-      <label for="fileCotent" id="file_content">파일 내용 : </label>
+      <label for="fileCotent" id="file_content">파일 내용</label>
       <textarea type="text" id="input_content" name="fileContent" placeholder="글자를 입력해주세요."></textarea>
     </div>
   </section>
+
   <section id="count">
     <div>공백 포함 : <span class="count_str">0</span></div>
     <div>공백 미포함 : <span class="count_char">0</span></div>
   </section>
+
   <section id="btn">
     <button href="" id="save_btn" download="info.txt">저장하기</button>
     <button id="delete_btn">모두 지우기</button>
-    <button id="dark_btn">야간모드</button>
+    <button for="checkbox" id="dark_btn" >야간모드</button>
   </section>
 
-  <script>
-    // 글자 수
-    const count_str = document.querySelector(".count_str");
-    const count_char = document.querySelector(".count_char");
-    const textarea = document.getElementById("input_content");
-
-    let regex = /\s/gi;
-
-    textarea.addEventListener("keyup", () => {
-      count_str.innerHTML = textarea.value.length;
-      count_char.innerHTML = textarea.value.replace(regex, "").length;
-      console.log("작동")
-    })
-
-    // 파일 저장하기
-    const save = document.getElementById("save_btn");
-
-    save.addEventListener("click", function saveFile(){
-      const fileName = document.getElementById("input_name").value;
-      const content = textarea.value;
-
-      console.log(content)
-
-      const hiddenEle = document.createElement("a");
-      hiddenEle.href = 'data:text/plain;charset=utf-11,' + encodeURI(content);
-      hiddenEle.download = fileName;
-      hiddenEle.target = "_blank";
-      hiddenEle.click();
-    });
-
-    document.getElementById("delete_btn").addEventListener("click", () => {
-      textarea.value = "";
-      count_str.innerHTML = 0;
-      count_char.innerHTML = 0;
-    })
-
-    // 야간모드
-    document.getElementById("dark_btn").addEventListener("click", () => {
-      document.body.style.backgroundColor = "black";
-      document.body.style.color = "white";
-    })
-
-  </script>
 </body>
+
 </html>
