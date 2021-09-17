@@ -1,3 +1,5 @@
+"use strict";
+
 // 글자 수
 const count_str = document.querySelector(".count_str");
 const count_char = document.querySelector(".count_char");
