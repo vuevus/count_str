@@ -3,13 +3,11 @@ body {
   &.darkMode {
     background-color: rgb(14, 14, 17);
     color: rgb(188, 184, 199);
-    #input_name {
-      background-color: rgb(24, 24, 27);
-      color: rgb(181, 176, 197);
-    }
+    #input_name,
     #input_content {
       background-color: rgb(24, 24, 27);
       color: rgb(181, 176, 197);
+      border: none;
     }
   }
 }
