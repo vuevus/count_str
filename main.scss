@@ -1,5 +1,7 @@
 body {
+  height: 100%;
   text-align: center;
+  margin: auto;
   &.darkMode {
     background-color: rgb(14, 14, 17);
     color: rgb(188, 184, 199);
@@ -7,7 +9,7 @@ body {
     #input_content {
       background-color: rgb(24, 24, 27);
       color: rgb(181, 176, 197);
-      border: none;
+      border: solid 1px rgb(78, 79, 82);
     }
   }
 }
@@ -51,6 +53,7 @@ textarea {
 }
 
 #btn {
+  margin: 24px;
   #save_btn {
   }
   #delete_btn {
