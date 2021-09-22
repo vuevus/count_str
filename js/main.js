@@ -45,6 +45,11 @@ document.getElementById("delete_btn").addEventListener("click", () => {
   count_char.innerHTML = 0;
 });
 
+// 내용 복사
+function clipCopy(data) {
+  textarea.value;
+}
+
 // 버전 정보
 const ver = document.getElementById("version");
 const ver_con = document.querySelector(".update_content");
@@ -55,3 +60,16 @@ ver.addEventListener("mouseover", () => {
 ver.addEventListener("mouseout", () => {
   ver_con.style.display = "none";
 });
+
+// Clipboard API supported?
+if (!navigator.clipboard) return;
+
+// copy text to clipboard
+if (navigator.clipboard.writeText) {
+  await navigator.clipboard.writeText("put this text on clipboard");
+}
+
+// get text from clipboard
+if (navigator.clipboard.readText) {
+  const text = await navigator.clipboard.readText();
+}
