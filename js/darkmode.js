@@ -18,7 +18,7 @@ const disableDarkMode = () => {
 if (DARK_MODE === "enabled") {
   enableDarkMode();
 } else {
-  darkBtn.innerHTML = "보통모드";
+  disableDarkMode();
 }
 
 darkBtn.addEventListener("click", () => {
