@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자수세기</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- <script src="./ts/main.ts" defer></script> -->
+    <script src="./ts/darkMode.js" defer></script>
+    <script src="./js/main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>글자수세기</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="./main.scss">
-  <script src="./ts/main.ts" defer></script>
-  <script src="./ts/darkMode.ts" defer></script>
-</head>
+  <body>
+    <header id="nav">
+      <h2 class="logo">글자수세기</h2>
+    </header>
 
-<body>
-  <header id="nav">
-    <h2 class="logo">글자수세기</h2>
-    <!-- <ul class="menu">
-      <li class="menu_item">업데이트</li>
-      <li class="menu_item">이메일</li>
-    </ul> -->
-    <div id="update">
-      <div id="version">v.1.1.2</div>
-      <div class="update_content">
-        <ul>
-          <li>파일명에 마침표가 들어갈 시, txt 파일로 저장되지 않는 부분 수정</li>
-          <li>파일내용 복사하기 기능 추가.</li>
-          <li>내용/모두 지우기 버튼을 누를 시, 확인하는 메시지 출력</li>
-          <li>모바일 버전 크기 수정</li>
-          <li>버튼 스타일 변경</li>
-        </ul>
+    <section id="text_content">
+      <div id="title">
+        <label for="fileName" id="file_name">파일 제목</label>
+        <input
+          type="text"
+          id="input_name"
+          name="fileName"
+          placeholder="파일 제목을 입력해주세요."
+        />
       </div>
-    </div>
-  </header>
-  
-  <section id="text_content">
-    <div id="title">
-      <label for="fileName" id="file_name">파일 제목</label>
-      <input type="text" id="input_name" name="fileName" placeholder="파일 제목을 입력해주세요.">
-    </div>
-    <div id="content">
-      <label for="fileCotent" id="file_content">파일 내용</label>
-      <textarea type="text" id="input_content" name="fileContent" placeholder="글자를 입력해주세요."></textarea>
-    </div>
-  </section>
+      <div id="content">
+        <label for="fileCotent" id="file_content">파일 내용</label>
+        <textarea
+          type="text"
+          id="input_content"
+          name="fileContent"
+          placeholder="글자를 입력해주세요."
+        ></textarea>
+      </div>
+    </section>
 
-  <section id="controls">
-    <div id="count">
-      <div>공백 미포함 : <span class="count_char">0</span></div>
-      <div>공백 포함 : <span class="count_str">0</span></div>
-    </div>
-  
-    <div id="btn">
-      <button id="delete_content_btn" class="btn">내용 지우기</button>
-      <button id="delete_btn" class="btn">모두 지우기</button>
-      <button id="copy_btn" class="btn">내용 복사하기</button>
-      <button for="checkbox" id="dark_btn" class="btn">야간모드</button>
-      <button href="" id="save_btn" class="btn" download="info.txt">저장하기</button>
-    </div>
-  </section>
+    <section id="controls">
+      <div id="count">
+        <div>공백 미포함 : <span class="count_char">0</span></div>
+        <div>공백 포함 : <span class="count_str">0</span></div>
+      </div>
 
-  <section id="footer">
-    <a class="email" href="mailto: cottongit0@gmail.com">cottongit0@gmail.com</a>
-  </section>
-
-</body>
-
+      <div id="btn">
+        <!-- <button for="checkbox" id="dark_btn" class="btn">야간모드</button> -->
+        <button href="" id="save_btn" class="btn" download="info.txt">
+          저장하기
+        </button>
+        <button id="copy_btn" class="btn">내용 복사하기</button>
+        <!-- <button id="delete_content_btn" class="btn">내용 지우기</button>
+        <button id="delete_btn" class="btn">모두 지우기</button> -->
+      </div>
+    </section>
+  </body>
 </html>

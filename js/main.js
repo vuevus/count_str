@@ -19,11 +19,12 @@ const save = document.getElementById("save_btn");
 save.addEventListener("click", function saveFile() {
   const fileName = document
     .getElementById("input_name")
-    .value.replace(/[.](\s*)/g, "");
+    .value.replace(/\s*/g, ""); // 모든 공백 제거
   const content = textarea.value;
 
   const hiddenEle = document.createElement("a");
-  hiddenEle.href = "data:text/plain;charset=utf-11," + encodeURI(content);
+  hiddenEle.href =
+    "data:text/plain;charset=utf-11," + encodeURIComponent(content);
   hiddenEle.download = fileName;
   hiddenEle.target = "_blank";
   hiddenEle.click();

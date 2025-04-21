@@ -1,0 +1,144 @@
+body {
+  height: 100vh;
+  text-align: center;
+  margin: auto;
+  box-sizing: border-box;
+}
+body.darkMode {
+  background-color: rgb(14, 14, 17);
+  color: rgb(188, 184, 199);
+}
+body.darkMode #input_name,
+body.darkMode #input_content {
+  background-color: rgb(24, 24, 27);
+  color: rgb(181, 176, 197);
+  border: solid 1px rgb(78, 79, 82);
+}
+body.darkMode .email {
+  color: rgb(188, 184, 199);
+}
+body.darkMode .btn {
+  background-color: #37384e;
+  color: #fff;
+}
+
+input {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  margin: 4px;
+  padding: 0.8em 1em;
+  border: none;
+  background-color: #f19143;
+  color: #fff;
+  border-radius: 3.75rem;
+}
+
+header {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: space-between;
+}
+header .logo {
+  margin: 0;
+}
+
+#update #version {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+#update .update_content {
+  display: none;
+  text-align: left;
+  position: absolute;
+  top: 5%;
+  padding: 8px;
+  border-radius: 4px;
+  right: 12px;
+  color: rgb(24, 24, 27);
+  background-color: rgb(255, 255, 255);
+}
+
+#question {
+  position: absolute;
+  position: absolute;
+  right: 12px;
+}
+#question .material-icons {
+  font-size: 36px;
+  cursor: pointer;
+}
+
+#text_content {
+  height: 80%;
+}
+#text_content label {
+  margin: 8px;
+}
+#text_content #title {
+  margin-bottom: 24px;
+}
+#text_content #title #file_name {
+  display: block;
+}
+#text_content #title #input_name {
+  width: 70%;
+  height: 36px;
+  font-size: 16px;
+}
+#text_content #content {
+  height: 100%;
+}
+#text_content #content #file_content {
+  display: block;
+}
+#text_content #content #input_content {
+  width: 70%;
+  height: 80%;
+  font-size: 16px;
+}
+
+#controls #count {
+  display: flex;
+  justify-content: center;
+}
+#controls #count div:nth-child(1) {
+  padding-right: 24px;
+}
+#controls #btn {
+  margin: 12px;
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    font-size: 14px;
+  }
+  .btn {
+    margin: 4px;
+    padding: 0.4em 0.7em;
+  }
+  #text_content {
+    height: 70%;
+  }
+  #text_content #title #input_name {
+    width: 80%;
+    height: 24px;
+  }
+  #text_content #content #input_content {
+    width: 80%;
+    height: 70%;
+  }
+}/*# sourceMappingURL=main.css.map */
